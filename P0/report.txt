@@ -1,0 +1,5 @@
+Report for P0:
+
+My solution works correctly without memory leaks. It complies without warnings and successfully matches large.out and small.out using diff. Also, my solution works on Arch Linux. I'm unsure if date duplicate works correctly because while it does work with my testing, I'm not sure if it will work with the unseen driver program. For duplicate I do a simple struct copy which I believe is just a shallow copy so I don't know if something different was required. I would like to give credit to Professor Sventek because I used his stack.c ADT to help implement my functions in both date.c and tldmap.c. I would also like to credit the BST Wikipedia page (URL: https://en.wikipedia.org/wiki/Binary_search_tree) because I used this page as a reference for binary search trees. 
+
+-Steve Kent (fkent)

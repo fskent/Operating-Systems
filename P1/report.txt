@@ -1,0 +1,23 @@
+Report for P1:
+
+I have parts 1 through 3 functioning correctly. I didn't have the chance to get to part 4
+so that is a straight copy of part 3. Part 3 complies with warnings because I used Professor
+Sventek's queue implementation and I didn't conform to the standards of that implementation. 
+I figured I'd take the one point hit rather than change all of the queue work that Professor
+Sventek developed. I am unsure if I am memory leak free. I run valgrind and see that it shows 
+the leak summary several times but for the very last leak summary it says there are no memory 
+leaks. I am guessing this is because of the nature of this project because we are creating 
+child processes that aren't cleared up until the end. Hopefully the final valgrind results 
+show that I am memory-leak free. I am unsure if I implemented standard input correctly. Some
+commands that are written in through standard input work, others don't. I couldn't really figure
+out why, I think it has something to do with my modifications to p1fxns but if I change that
+it doesn't work for workload files. 
+
+I would like to give credit to Professor Joe Sventek and Roscoe Casita. I used examples in 
+Elagent C Programming (written by Sventek) to implement portions of my code. Also, I used 
+Sventek's queue, iterator, and p1fxns files to provide my code with further support. I made 
+small modifications in p1fxns.c in the p1getword function (labeled within code). From Roscoe, 
+I used some of his functions from labs to implement portions of my code. Specifically, I 
+adapted functions from lab3, lab4 and lab5. 
+
+- Steve Kent 

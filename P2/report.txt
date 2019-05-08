@@ -1,0 +1,21 @@
+Report for P2:
+
+I believe that I am not leaking any Packet Descriptors based on the FPDS testing. I am
+unsure as to whether or not the program actually works because near the end of a mydemo 
+run I get several failed attempts to send a packet before it terminates. I believe that 
+my threads follow a good pattern of success but I am unsure if they fulfill all system 
+requirements. My testing using just a mydemo run has not experienced any crashes or seg
+faults. There was one compiler warning related to valid arguments types of a function. 
+Included in my submission is three diagrams. "System" describes overall data flow. 
+"SenderThread" describes actions taken by the sender thread. "ReceiverThread" describes 
+actions taken by the receiver thread.
+
+Description of Blocking Behaviors:
+
+The blocking behavior of the network driver functions follow the requirements because
+they use the bounded buffer implementation and call the necessary bounded buffer functions.
+For example, "blocking_get_packet" uses the bounded buffer function "blocking_read" on the
+established receive buffer to effective create the require blocking behavior. For 
+nonblocking functions, the related bounded buffer function is called. The bounded buffers
+implement a mutex and conditional variables so this improves the synchronization/data security
+and allows me to not need a mutex or conditional variables implemented in my threads. 
